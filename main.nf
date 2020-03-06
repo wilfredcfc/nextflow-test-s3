@@ -104,8 +104,6 @@ process '1B_prepare_genome_picard' {
  */
 
 process '1C_prepare_star_genome_index' {
-  memory '4 GB'
-
   tag "$genome.baseName"
 
   input:
