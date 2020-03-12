@@ -28,12 +28,13 @@
  * Define the default parameters
  */ 
 
-params.s3bucket   = "s3://nextflow-data"
-params.genome     = "${params.s3bucket}/data/genome.fa"
-params.variants   = "${params.s3bucket}/data/known_variants.vcf.gz"
-params.blacklist  = "${params.s3bucket}/data/blacklist.bed" 
-params.reads      = "${params.s3bucket}/data/reads/rep1_{1,2}.fq.gz"
-params.results    = "${params.s3bucket}/results"
+params.s3input    = "s3://nextflow-data"
+params.s3output   = "s3://nextflow-data"
+params.genome     = "${params.s3input}/data/genome.fa"
+params.variants   = "${params.s3input}/data/known_variants.vcf.gz"
+params.blacklist  = "${params.s3input}/data/blacklist.bed" 
+params.reads      = "${params.s3input}/data/reads/rep1_{1,2}.fq.gz"
+params.results    = "${params.s3output}/results"
 params.gatk       = '/usr/local/bin/GenomeAnalysisTK.jar'
 params.gatk_launch = "java -jar $params.gatk" 
 
